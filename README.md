@@ -25,6 +25,8 @@
 - Real-time notifications for trashcan status and maintenance alerts.
 - Configuration portal for custom parameter setup.
 - Data storage using JSON file on SPIFFS filesystem.
+- WiFi Manager integration for easy WiFi connection configuration.
+- LED indicator for visual feedback.
 
 ## Demo
 
