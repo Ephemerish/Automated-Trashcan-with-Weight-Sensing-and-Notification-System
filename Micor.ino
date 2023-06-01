@@ -19,6 +19,7 @@ Team Members:
     [Daisy Marie Bernante]
 
 Date: [May 2023]
+https://github.com/Ephemerish/Automated-Trashcan-with-Weight-Sensing-and-Notification-System
 */////////////////////////////////////////////////////////////////////////////
 
 // Libraries
