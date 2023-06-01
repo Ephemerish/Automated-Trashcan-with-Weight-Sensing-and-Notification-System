@@ -1,6 +1,6 @@
 /*/////////////////////////////////////////////////////////////////////////////
 Automated Trashcan with Weight Sensing and Notification System
-Team Name: [BSCPE 3B - Group 1] - Batch 2020-2024
+Team Name: [BSCPE 3B - Group 1] - BISU - Main Campus - Batch 2020-2024
 Description:
   This code is for an ESP32-based automated trashcan with weight sensing, proximity detection, 
   and notification system. The device utilizes a load cell to measure the weight of the trashcan 
