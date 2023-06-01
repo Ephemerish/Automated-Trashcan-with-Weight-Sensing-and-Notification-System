@@ -6,15 +6,17 @@
 
 ## Table of Contents
 
-- [Features](#features)
-- [Demo](#demo)
-- [Hardware Components](#hardware-components)
-- [Software Libraries](#software-libraries)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
+- [Automated Trashcan with Weight Sensing, Proximity Detection, and Notification System](#automated-trashcan-with-weight-sensing-proximity-detection-and-notification-system)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Demo](#demo)
+  - [Hardware Components](#hardware-components)
+  - [Software Libraries](#software-libraries)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Configuration](#configuration)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Features
 
@@ -32,15 +34,24 @@
 
 - ESP32 development board
 - Load cell or weight sensor
-- Proximity sensor
-- Trashcan with motorized lid or actuator mechanism
-- Power supply
+- Ultrasonic Proximity sensor
+- Servo Motor
+- Trashcan
+- RGB LED's 
 
 ## Software Libraries
 
+- ESP32Servo
+- NewPing
+- HX711_ADC
+- EEPROM
+- WiFi
+- FS
+- SPIFFS
 - WiFiManager
 - ArduinoJson
-- [Other libraries used in your project]
+- WiFiClientSecure
+- UniversalTelegramBot
 
 ## Installation
 
@@ -54,24 +65,31 @@
 
 1. Power on the automated trashcan.
 2. Connect your device to the same WiFi network as the trashcan.
-3. The trashcan will automatically connect to the WiFi network using WiFi Manager.
-4. Access the trashcan's web portal to configure custom parameters and thresholds.
+3. Access the trashcan's web portal to configure Wifi, custom parameters and thresholds.
+4. The trashcan will automatically connect to the WiFi network using WiFi Manager after first setup.
 5. The trashcan will continuously monitor the weight and proximity to detect when to open.
 6. Real-time notifications will be sent to the designated user for maintenance or alerts.
 7. Empty the trashcan when necessary.
-
+   
 ## Configuration
 
-- Custom parameter configuration:
-  - [Parameter 1]: [Description]
-  - [Parameter 2]: [Description]
-  - [Parameter 3]: [Description]
-  - [Additional parameters, if any]
+The WiFi Configuration Device allows users to configure WiFi settings and custom parameters through a web-based configuration portal. Follow the steps below to configure the device:
 
-- Threshold configuration:
-  - [Weight Threshold]: [Description]
-  - [Proximity Threshold]: [Description]
-  - [Additional thresholds, if any]
+1. Power on the device.
+2. The device will attempt to connect to the saved WiFi network automatically. If no saved configuration is found or the connection fails, the device will enter configuration mode.
+3. If the device enters configuration mode, it will create a WiFi network named "WiFiConfigDevice". Connect to this network using a computer or mobile device.
+4. Open a web browser and navigate to http://192.168.4.1 (or the IP address assigned to the device if changed).
+5. The web-based configuration portal will appear. Here, you can perform the following configurations:
+
+   - Select the desired WiFi network from the available networks and enter the password (if required).
+   - Enter any custom parameters such as device location or identification number.
+
+6. Click the "Save" button to save the configuration.
+7. The device will reboot and attempt to connect to the configured WiFi network using the provided credentials.
+8. If the connection is successful, the device will operate normally.
+9. If the connection fails, the device will re-enter configuration mode, allowing you to repeat the configuration process.
+
+Please note that the provided code serves as a basic example and can be customized to fit your specific requirements. You can add additional custom parameters to collect specific information or settings from the user. The appearance of the configuration portal can be customized by modifying the HTML and CSS files provided in the code. Additionally, you may want to enhance the error handling and recovery mechanisms to provide better user feedback in case of connection failures or other issues.
 
 ## Contributing
 
@@ -83,4 +101,4 @@
 
 ## License
 
-[License Name] © [Your Team Name]
+MIT License © 2023 [BSCPE 3B - Group 1] - BISU - Main Campus - Batch 2020-2024
