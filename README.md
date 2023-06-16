@@ -103,4 +103,4 @@ Please note that the provided code serves as a basic example and can be customiz
 
 ## License
 
-MIT License © 2023 [BSCPE 3B - Group 1] - BISU - Main Campus - Batch 2020-2024
+MIT License © 2023 [BSCPE 3B - Group 1] - BISU - Main Campus - Batch 2024
